@@ -8,7 +8,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 from seleniumwire import webdriver
 
 chrome_options = Options()
-chrome_options.add_experimental_option("detach", True)
+
+
+# chrome_options.add_experimental_option("detach", True)
 
 
 def auth_instagram(driver, login, password):
@@ -79,7 +81,6 @@ def parse_followers_headers(login, password, account_name, account_id):
 
 def parse_account_headers(login, password, account_name):
     driver = webdriver.Chrome(options=chrome_options)
-    wait = WebDriverWait(driver, 20)
     if os.path.exists("cookies.pkl"):
         print("Загружаем куки из файла...")
         with open("cookies.pkl", "rb") as f:
