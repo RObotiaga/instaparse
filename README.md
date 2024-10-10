@@ -31,14 +31,14 @@ You also need the following Python packages:
 - `requests`
 - `selenium`
 - `selenium-wire`
-- `python-dotenv`
+- `python-decouple`
 
 To install the dependencies, run:
 
 Чтобы установить зависимости, выполните:
 
 ```sh
-pip install requests selenium selenium-wire python-dotenv
+pip install requests selenium selenium-wire python-decouple
 ```
 
 ## Getting Started / Начало работы
