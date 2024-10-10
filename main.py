@@ -21,7 +21,7 @@ def parse_followers(followers_count):
             for i in response.json()["users"]:
                 user_list = user_list + f"{i['username']}:{i['full_name']};"
             max_id = response.json()["next_max_id"]
-            if len(user_list) > followers_count:
+            if len(user_list) > int(followers_count):
                 break
     except KeyboardInterrupt:
         return user_list
